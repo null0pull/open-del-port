@@ -1,10 +1,13 @@
 import win32com.shell.shell as shell
+from Check_Ports import *
 
 
 class ocp:
     def __init__(self):
+        print('Your External IP >> ',ip)
         self.banner()
         print('1.Open Ports\n2.Delete Rule-Ports')
+        print('3.Check for open ports')
         self.ch()
 
 
@@ -29,6 +32,8 @@ class ocp:
                 self.op()
             elif ch==2:
                 self.dele()
+            elif ch==3:
+                main()
             else:
                 print('check ur ch!')
         except ValueError:
